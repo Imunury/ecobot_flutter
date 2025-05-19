@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'screens/ecobot_list_screen.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
-  runApp(MyApp());
+Future<void> main() async {
+  await dotenv.load(); // 루트에 있는 .env 파일을 기본 경로로 인식
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
